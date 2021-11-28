@@ -1,4 +1,6 @@
 produtos = []
+produton = 0
+valorn = 1
 
 while True:
     produto = str(input('Nome do produto: '))
@@ -12,5 +14,15 @@ while True:
         continue
     else:
         break
-for p in produtos:
-    print(p)
+
+def total():
+    contador = 0
+    for p in produtos:
+        contador += 1
+    return contador
+
+
+while total() > valorn:
+    print(f'Produto: {produtos[produton]}....... Valor: R${produtos[valorn]}')
+    produton += 2
+    valorn += 2
