@@ -38,9 +38,10 @@ while total() > valorn:
     produton += 2
     valorn += 2
     print('---')
-
+print(f'Valor geral: R${valor_geral}.')
 
 gerar = str(input('\nVocê quer gerar um arquivo?'))
+
 try:
     if gerar == 'y':
         arquivo = open('lista.txt', 'w')
@@ -51,6 +52,8 @@ try:
             arquivo.write(' \n')
             valorn += 2
             produton += 2
+        arquivo.write(f'Valor geral: R${valor_geral}')
+
     else:
         exit()
 except:
